@@ -12,6 +12,7 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int cartId;
+    private int cartTotal;
 
     @JsonIgnore
     @OneToOne(mappedBy = "cart")
@@ -34,6 +35,7 @@ public class Cart {
     }
 
     public void addProducts(Product product) {
+        cartTotal=cartTotal+product.getPrize();
         products.add(product);
     }
 }

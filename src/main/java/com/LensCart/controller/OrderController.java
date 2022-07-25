@@ -37,7 +37,7 @@ public class OrderController {
 
     @PutMapping("/{orderId}/product/{productId}")
     public void addProduct(@PathVariable int orderId, @PathVariable int productId){
-        orderService.placeOrder(orderId,productId);
+         orderService.placeOrder(orderId,productId);
 
     }
     @PutMapping("/{orderId}/user/{userId}")

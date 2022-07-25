@@ -56,6 +56,7 @@ public class CartService {
 
         Cart cart=cartRepository.findById(cartId).get();
         Product product=productRepository.findById(productId).get();
+        cart.setCartTotal(cart.getCartTotal()-product.getPrize());
         cart.getProducts().remove(product);
         cartRepository.save(cart);
 

@@ -77,6 +77,7 @@ public class ProductService {
 
             Cart cart=  myUser.getCart();
             cart.clearProducts();
+            cart.setCartTotal(0);
             userRepository.save(myUser);
 
 

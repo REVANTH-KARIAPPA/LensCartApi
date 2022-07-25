@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class Product {
+public class  Product {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer productId;

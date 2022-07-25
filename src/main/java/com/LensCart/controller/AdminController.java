@@ -20,7 +20,7 @@ public class AdminController {
         productService.deleteProduct(pid);
     }
     @PutMapping("/{pid}")
-    public void updateProduct(@RequestBody Product product, @PathVariable Integer pid) {
+    public void updateProduct(@RequestBody Product product, @PathVariable Integer pid)  {
         productService.updateProduct(product,pid);
     }
     @PostMapping("/create")

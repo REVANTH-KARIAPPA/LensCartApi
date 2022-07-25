@@ -14,7 +14,7 @@ import java.util.List;
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class UserController {
     @Autowired
-    UserService userService;
+    UserService  userService;
 
 
     @GetMapping("/all")

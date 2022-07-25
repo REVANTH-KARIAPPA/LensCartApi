@@ -12,6 +12,7 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int orderId;
+    private int orderTotal;
 
     @ManyToMany
     @JoinTable(name ="ordered_products",
@@ -22,8 +23,17 @@ public class Orders {
     @ManyToOne
     private User users;
 
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+
+        for(Product e: products){
+            setOrderTotal(getOrderTotal() + e.getPrize()) ;
+        }
+
+    }
 
     public void putProduct(Product product) {
+        orderTotal=orderTotal+product.getPrize();
         products.add(product);
     }
 }

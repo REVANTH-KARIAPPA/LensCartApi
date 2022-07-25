@@ -20,7 +20,7 @@ public class ProductController {
     @GetMapping("/all")
     public List<Product> getAllProducts(){
 
-        return productService.getAllProducts();
+         return productService.getAllProducts();
     }
     @GetMapping("/{pid}")
     public ResponseEntity<Product> getProduct(@PathVariable Integer pid)

@@ -16,7 +16,7 @@ public class Category {
 
 
     @OneToMany
-    private List<Product> products;
+    private List<Product>  products;
 
 
     public void addProduct(Product p){

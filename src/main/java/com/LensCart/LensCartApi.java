@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LensCartApi {
+public class  LensCartApi {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LensCartApi.class, args);
