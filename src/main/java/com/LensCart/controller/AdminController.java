@@ -10,7 +10,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3006)
 public class AdminController {
     @Autowired
     ProductService productService;
